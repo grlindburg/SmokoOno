@@ -171,31 +171,11 @@ function(
     onMouseEnter: function(e) {
       var id = Number.parseInt(e.currentTarget.dataset.id);
       var target = this.matchTarget(id);
-
-      if (this.isCurrentTarget(target)) {
-        if (!this.isTraveling) {
-          this.highlightTarget(target);
-        }
-
-        return true;
-      }
-
-      this.highlightObject(e);
     },
 
     onMouseLeave: function(e) {
       var id = Number.parseInt(e.currentTarget.dataset.id);
       var target = this.matchTarget(id);
-
-      if (this.isCurrentTarget(target)) {
-        if (!this.isTraveling) {
-          this.unhighlightTarget(target);
-        }
-
-        return true;
-      }
-
-      this.unhighlightObject(e);
     },
 
     travelToObject: function(target) {
