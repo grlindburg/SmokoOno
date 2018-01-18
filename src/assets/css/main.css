@@ -4690,6 +4690,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.125rem;
   margin: 0 auto;
   width: 20%; }
+  @media (max-width: 480px) {
+    .planet-name {
+      width: 70%; } }
 
 .toggle-effects {
   position: fixed;
