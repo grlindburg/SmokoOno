@@ -229,7 +229,6 @@ function(Moon, ColorManager) {
       var data = analyser.getAverageFrequency()
       setInterval(function(){
         data = analyser.getAverageFrequency()
-        console.log(data)
       }, 1000)
 
       //alert(source);
