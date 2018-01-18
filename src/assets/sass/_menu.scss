@@ -112,6 +112,10 @@
     font-size: 1.125rem;
     margin: 0 auto;
     width: 20%;
+
+    @include mobile {
+        width: 70%;
+    }
 }
 
 .toggle-effects {
