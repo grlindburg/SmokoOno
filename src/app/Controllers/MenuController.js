@@ -84,38 +84,6 @@ function(
         }
       );
 
-        // instantiate a loader
-        var loader = new THREE.ImageLoader();
-
-        // load a image resource
-        loader.load(
-          // resource URL
-          'src/assets/img/cokpito.png',
-
-          // onLoad callback
-          function ( image ) {
-            // use the image, e.g. draw part of it on a canvas
-            var canvas = document.createElement( 'canvas' );
-            var context = canvas.getContext( '2d' );
-            context.drawImage( image, 100, 100 );
-            console.log("hello");
-
-            console.log(image);
-            canvas.position.set(scene2.camera.position.x,scene2.camera.position.y, 14800);
-            console.log(canvas.position);
-
-            scene2.add( object );
-          },
-
-          // onProgress callback currently not supported
-          undefined,
-
-          // onError callback
-          function () {
-            console.error( 'An error happened.' );
-          }
-        );
-
       console.log(this.sceneObjects);
       console.log(this.spaceship);
       var target = this.matchTarget(3);

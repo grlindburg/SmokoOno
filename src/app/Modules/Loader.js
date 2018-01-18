@@ -17,23 +17,6 @@ function(
 ) {
   'use strict';
 
-  var seenJsFeaturesModal = false;
-
-  if (window.localStorage) {
-    seenJsFeaturesModal = localStorage.getItem('seenJsFeaturesModal');
-  }
-
-  if (!seenJsFeaturesModal) {
-    var browserAlert = new Foundation.Reveal($('#browser-compatibility-modal'));
-    browserAlert.open();
-
-    $('#browser-compatibility-got-it').on('click', ()=> {
-      if (window.localStorage) {
-        localStorage.setItem('seenJsFeaturesModal', 'true');
-      }
-    });
-  }
-
   function notifyGa(category, action, label) {
     ga('send', 'event', category, action, label);
 
