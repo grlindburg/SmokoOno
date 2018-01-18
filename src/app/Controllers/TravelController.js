@@ -72,9 +72,9 @@ function(Moon, ColorManager) {
       }
 
       return {
-        x: destinationX,
-        y: destinationY,
-        z: destinationZ + (targetObject.threeDiameter * 0.15)
+        x: destinationX - (targetObject.threeDiameter * 6), //- (targetObject.threeDiameter * 4),
+        y: destinationY - (targetObject.threeDiameter * 5), //- (targetObject.threeDiameter * 4),
+        z: destinationZ + (targetObject.threeDiameter * 1)//- (targetObject.threeDiameter * 4)
       };
     }
 
@@ -136,10 +136,8 @@ function(Moon, ColorManager) {
 
       window.addEventListener('touchstart', this.playSound(targetObject, listener));
 
-      console.log(targetObject);
-
       // get the average frequency of the sound
-      //var data = analyser.getFrequencyData();
+      // var data = analyser.getFrequencyData();
 
       //return takeOff.start().onComplete(()=> {
         var cameraTween = new TWEEN.Tween(this.camera.position)
