@@ -193,7 +193,6 @@ function(Moon, ColorManager) {
     }
 
     playSound(targetObject, listener) {
-      
 
       // create a global audio source
       var sound = new THREE.PositionalAudio( listener );
@@ -223,12 +222,17 @@ function(Moon, ColorManager) {
       });
 
       var source = listener.context.createBufferSource();
-      source.connect(listener.context.destination);
+
       source.start();
+
+      var analyser = new THREE.AudioAnalyser( sound, 32 );
+      var data = analyser.getAverageFrequency()
+      setInterval(function(){
+        data = analyser.getAverageFrequency()
+      }, 1000)
 
       //alert(source);
       targetObject.threeObject.add(sound);
-
     }
 
     /**
