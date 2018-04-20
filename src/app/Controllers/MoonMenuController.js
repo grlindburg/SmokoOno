@@ -30,7 +30,7 @@ function($, _, Backbone, TemplateLoader, TravelController) {
       this.model = new this.model({ data: [] });
       this.templateLoader = new TemplateLoader();
       this.travelController = new TravelController(this.scene);
-      this.template = this.templateLoader.get('moons', 'src/app/Views/moons.twig').then((template)=> {
+      this.template = this.templateLoader.get('moons', 'http://grlindburg.com/SmokoSystem/src/app/Views/moons.twig').then((template)=> {
         this.template = template;
         this.render();
         this.initializePlugins();

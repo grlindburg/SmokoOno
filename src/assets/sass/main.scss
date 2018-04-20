@@ -17,7 +17,7 @@
 .intro-screen {
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 10%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -25,11 +25,11 @@
     z-index: 3;
     background: black;
     padding-top: 20px;
-    display: none;
+    // display: none;
 }
 
 .intro-heading {
-    background: url('../img/sun-horizon-glow-600.png') no-repeat center center;
+    background: url('https://ear2ground.blob.core.windows.net/media/46/img/sun-horizon-glow-600.png') no-repeat center center;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
     text-align: center;
@@ -105,7 +105,7 @@
     text-align: center;
     opacity: 0;
     transition: opacity 500ms ease-out;
-    margin: 2rem auto;
+    margin: 30vh auto;
 
     &.active {
         opacity: 1;
@@ -166,6 +166,9 @@
     opacity: 0;
 
     &.active {
+        position: relative;
+        display: block;
+        z-index: 10;
         opacity: 1;
     }
 }
@@ -291,3 +294,52 @@
     // width: 30%;
     // margin: 1rem 2rem 0;
 }
+
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+    display: none;
+}
+
+input, button, textarea {
+    border: 2px solid #6BB859 !important;
+    border-radius: 1rem !important;
+    background: black !important;
+    color: white !important;
+    z-index: 1;
+    position: relative;
+    width: 40% !important;
+    margin: 1.5rem auto 0 !important;
+    // display: block !important;
+    display: none;
+    opacity: 0;
+    padding: 1rem !important;
+    transition: all 1s linear !important;
+    &:first-of-type {
+        margin: 10% auto 0 !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    input, button, textarea { 
+        width: 80% !important;
+    }
+}
+
+textarea {
+    &:first-of-type {
+        min-height: 20vh;
+        margin-top: 1.5rem !important;
+    }
+}
+
+button {
+    &:first-of-type {
+        margin-top: 1.5rem !important;
+    }
+}
+
+.contact {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+

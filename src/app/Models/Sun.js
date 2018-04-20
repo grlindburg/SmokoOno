@@ -71,7 +71,7 @@ function(CelestialObject, Constants) {
       var mesh = new THREE.Mesh(geometry, surface);
       var lightColor = 0xffffff;
       var intesity = 1;
-      var lightDistanceStrength = DISTANCE_TO_KUIPER_BELT * Constants.universeScale;
+      var lightDistanceStrength = 9460730472580 * Constants.universeScale;
       var lightDecayRate = 0.6;
       var sunLight = new THREE.PointLight(lightColor, intesity, lightDistanceStrength, lightDecayRate);
 
@@ -91,6 +91,8 @@ function(CelestialObject, Constants) {
 
       texture.minFilter = THREE.NearestFilter;
 
+
+
       return new THREE.MeshPhongMaterial({
         map: texture,
         lightMap: texture,
@@ -98,6 +100,8 @@ function(CelestialObject, Constants) {
         opacity: 0.85, // 0.8
         shading: THREE.SmoothShading
       });
+
+
     };
   }
 

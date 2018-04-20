@@ -14,7 +14,7 @@ function(Constants, Scene, RandomNumberGenerator, AjaxRequest) {
       this._starsCount = 8000;
       this._threeDistanceFromParent = 14959787070 * 40000 * Constants.orbitScale;
       this._randomNumberGenorator = new RandomNumberGenerator();
-      this._texture = new THREE.TextureLoader().load('src/assets/textures/star.jpg');
+      this._texture = new THREE.TextureLoader().load('http://grlindburg.com/SmokoSystem/src/assets/textures/star.jpg');
       this._scene = scene;
 
       this.getStarData();
@@ -43,7 +43,7 @@ function(Constants, Scene, RandomNumberGenerator, AjaxRequest) {
         var positions = new Float32Array(particles * 3);
         var colors = new Float32Array(particles * 3);
         var color = new THREE.Color();
-        var n = 1000;
+        var n = 100000000;
         var n2 = n / 2; // particles spread in the cube
 
         for (var i = 0; i < positions.length; i += 3) {
@@ -56,7 +56,7 @@ function(Constants, Scene, RandomNumberGenerator, AjaxRequest) {
           positions[i + 1] = y;
           positions[i + 2] = z;
 
-          color.setRGB(255, 255, 255);
+          color.setRGB(255, 0, 0);
 
           colors[i] = color.r;
           colors[i + 1] = color.g;
@@ -68,8 +68,9 @@ function(Constants, Scene, RandomNumberGenerator, AjaxRequest) {
         geometry.computeBoundingSphere();
 
         var material = new THREE.PointsMaterial({
-          size: 5,
-          map: this._texture
+          size: 50
+          //lights: true
+          //map: this._texture
         });
 
         var stars = new THREE.Points(geometry, material);

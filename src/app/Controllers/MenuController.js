@@ -33,6 +33,14 @@ function(
       'mouseleave a[data-id]': 'onMouseLeave'
     },
 
+    toRadians: function(angle) {
+      return angle * (Math.PI / 180);
+    },
+
+    toDegrees: function(angle) {
+      return angle * (180 / Math.PI);
+    },
+
     initialize: function(options) {
       this.scene = options.scene || null;
       this.camera = this.scene ? this.scene.camera : null;
@@ -44,28 +52,77 @@ function(
       this.isTraveling = false;
       this.hasTraveled = false;
 
+      console.log(this.scene.children);
+
       var scene2 = this.scene;
 
-      console.log('hi');
       var loader = new THREE.OBJLoader();
 
       var spaceship;
 
+      var so = this.sceneObjects;
+
+
+      VolumetricFire.texturePath = '/SmokoOno/src/assets/textures/';
+
+      var width = window.innerWidth;
+      var height = window.innerHeight;
+
+      var fireWidth  = 2391016;
+      var fireHeight = 2391016;
+      var fireDepth  = 2;
+      var sliceSpacing = 0.5;
+
+      var fire = new VolumetricFire(
+        fireWidth,
+        fireHeight,
+        fireDepth,
+        sliceSpacing,
+        this.camera
+      );
+
+      fire.mesh.name = "fire!";
+      scene2.add( fire.mesh );
+      scene2._fire = fire;
+      console.log(fire);
+      // you can set position, rotation and scale
+      // fire.mesh accepts THREE.mesh features
+      fire.mesh.position.set( 0, fireHeight / 2, 0 );
+
+
       // load a resource
       spaceship = loader.load(
         // resource URL
-        'src/assets/img/Low_poly_UFO.obj',
+        'http://grlindburg.com/SmokoSystem/src/assets/img/ufo.obj',
         // called when resource is loaded
         function ( object ) {
 
-          console.log(scene2.camera.position);
-          object.position.set(0, -75, -200);
-          console.log(object.position);
+          console.log('hey now');
+
+          object.position.set(0, -35, -100);
+
+          var ufoMaterial = new THREE.MeshLambertMaterial( { color: 0xffffff, envMap: scene2._cubeCamera.renderTarget.texture, reflectivity: 0.9 } );
+          object.children[0].material = ufoMaterial;
+          object.children[1].material = ufoMaterial;
+
 
           scene2.camera.add( object );
-
           scene2.camera.lookAt(object.position);
+
+
+          //scene2._cubeCamera.position.copy(object.position );
+
+          object.add(scene2._cubeCamera);
+
+          //console.log(object);
           spaceship = object;
+          //so['ship'] = spaceship;
+
+          setInterval(function(){
+            spaceship.children[0].rotation.y += .03;
+            spaceship.children[1].rotation.y += .03;
+          }, 1)
+
 
           return spaceship;
 
@@ -73,20 +130,19 @@ function(
         // called when loading is in progresses
         function ( xhr ) {
 
-          console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
 
         },
         // called when loading has errors
         function ( error ) {
 
-          console.log( 'An error happened' );
 
         }
-      );
+      );      
 
-      console.log(this.sceneObjects);
-      console.log(this.spaceship);
       var target = this.matchTarget(3);
+
+      //scene2.add(cubeCamera);
+
 
       //this.travelController.travelToObject(
       //  this.scene.camera.parent.position,
@@ -101,7 +157,7 @@ function(
       //);
 
       this.currentTarget = options.currentTarget || this.sceneObjects[0];
-      this.template = this.templateLoader.get('planets', 'src/app/Views/menu.twig').then((template)=> {
+      this.template = this.templateLoader.get('planets', 'http://grlindburg.com/SmokoSystem/src/app/Views/menu.twig').then((template)=> {
         this.template = template;
         this.render();
         this.initializePlugins();
@@ -114,6 +170,70 @@ function(
           sceneObjects: this.sceneObjects.moons
         });
       });
+
+      var loader = new THREE.FontLoader();
+
+      var controller = this;
+
+      loader.load( 'http://grlindburg.com/SmokoSystem/src/assets/fonts/helvetiker_bold.typeface.json', function ( font ) {
+
+          var textGeo = new THREE.TextGeometry( "Superstar Moves", {
+
+              font: font,
+
+              size: .15,
+              height: .05
+              //curveSegments: 12,
+
+              //bevelThickness: 2,
+              //bevelSize: 5,
+              //bevelEnabled: true
+
+          } );
+
+          var textMaterial = new THREE.MeshPhongMaterial( { color: 0xffffff } );
+
+          var mesh = new THREE.Mesh( textGeo, textMaterial );
+          //mesh.position.set(-.2, .55, 0);
+          mesh.position.set(0,0,0);
+          mesh.geometry.translate(-.7, 0, 1);
+          //mesh.rotation.set(controller.toRadians(90), controller.toRadians(180), 0);
+
+
+          //so.planets[2].threeObject.add( mesh );
+
+      } );
+
+      loader.load( 'http://grlindburg.com/SmokoSystem/src/assets/fonts/helvetiker_bold.typeface.json', function ( font ) {
+
+          var textGeo = new THREE.TextGeometry( "COMING SOON", {
+
+              font: font,
+
+              size: .15,
+              height: .05
+              //curveSegments: 12,
+
+              //bevelThickness: 2,
+              //bevelSize: 5,
+              //bevelEnabled: true
+
+          } );
+
+          var textMaterial = new THREE.MeshPhongMaterial( { color: 0xffffff } );
+
+          var mesh = new THREE.Mesh( textGeo, textMaterial );
+          //mesh.position.set(-.7, 1, 0);
+          mesh.position.set(0,0,0);
+          mesh.geometry.translate(-.7, 0, 1);
+          //mesh.rotation.set(controller.toRadians(90), controller.toRadians(180), 0);
+
+
+          //so.planets[1].threeObject.add( mesh );
+
+      } );
+
+
     },
 
     initializePlugins: function() {
@@ -131,6 +251,23 @@ function(
       if (this.isCurrentTarget(target)) {
         e.stopImmediatePropagation();
         return false;
+      }
+
+      if(id == 2) {
+        $('input').fadeIn();
+        $('textarea').fadeIn();
+        $('button').fadeIn();
+        $('input').addClass('contact');
+        $('textarea').addClass('contact');
+        $('button').addClass('contact');
+      } else {
+        $('input').fadeOut();
+        $('textarea').fadeOut();
+        $('button').fadeOut();
+        $('input').removeClass('contact');
+        $('textarea').removeClass('contact');
+        $('button').removeClass('contact');
+
       }
 
       this.travelToObject(target);

@@ -42,6 +42,19 @@ function(Constants, Stats) {
 
       requestAnimationFrame(render);
       TWEEN.update();
+      self._scene._cubeCamera.update(self._renderEngine, self._scene);
+
+      var elapsed = self._scene._clock.getElapsedTime();
+
+      //console.log(self._scene._fire);
+      //if(self._scene._fire) {
+      //  self._fire.update( elapsed );
+
+      //}
+
+
+
+      //console.log(cubeCamera);
       document.dispatchEvent(frameEvent);
       self._renderEngine.render(self._scene, self._camera);
 

@@ -38,11 +38,41 @@
         },
         "_3d": {
             "textures": {
-                "base": "src/assets/textures/sun_detailed.png"
+                "base": "http://grlindburg.com/SmokoSystem/src/assets/textures/sun_detailed.png"
             }
         }
     },
     "planets": [
+        {
+            "id": 2,
+            "name": "Venus",
+            "diameter": 12104,
+            "mass": 4.87,
+            "gravity": 8.9,
+            "density": 5243,
+            "rotationPeriod": -5832.5,
+            "lengthOfDay": 2802,
+            "distanceFromParent": 108200000,
+            "orbitalPeriod": 224.7,
+            "orbitalVelocity": 35,
+            "orbitalInclination": 3.4,
+            "axialTilt": 177.4,
+            "orbitPositionOffset": 155,
+            "meanTemperature": 464,
+            "surfaceTemps": {
+                "min": 655,
+                "mean": 735,
+                "max": 1100
+            },
+            "rings": false,
+            "satellites": [],
+            "_3d": {
+                "textures": {
+                    "base": "http://grlindburg.com/SmokoSystem/src/assets/textures/venus.jpg",
+                    "topo": "http://grlindburg.com/SmokoSystem/src/assets/textures/venus_topo.jpg"
+                }
+            }
+        },
         {
             "id": 3,
             "name": "Earth",
@@ -81,8 +111,8 @@
                     },
                     "_3d": {
                         "textures": {
-                            "base": "src/assets/textures/earth/satellites/moon_1k.jpg",
-                            "topo": "src/assets/textures/earth/satellites/moon_topo_1k.jpg"
+                            "base": "http://grlindburg.com/SmokoSystem/src/assets/textures/earth/satellites/moon_1k.jpg",
+                            "topo": "http://grlindburg.com/SmokoSystem/src/assets/textures/earth/satellites/moon_topo_1k.jpg"
                         }
                     }
                 }
@@ -96,8 +126,8 @@
             ],
             "_3d": {
                 "textures": {
-                    "base": "src/assets/textures/earth_4k_small.jpg",
-                    "topo": "src/assets/textures/earth_topo_4k.jpg"
+                    "base": "http://grlindburg.com/SmokoSystem/src/assets/textures/earth_4k_small.jpg",
+                    "topo": "http://grlindburg.com/SmokoSystem/src/assets/textures/earth_topo_4k.jpg"
                 }
             }
         },
@@ -140,8 +170,8 @@
                     },
                     "_3d": {
                         "textures": {
-                            "base": "src/assets/textures/earth/satellites/moon_1k.jpg",
-                            "topo": "src/assets/textures/earth/satellites/moon_topo_1k.jpg"
+                            "base": "http://grlindburg.com/SmokoSystem/src/assets/textures/earth/satellites/moon_1k.jpg",
+                            "topo": "http://grlindburg.com/SmokoSystem/src/assets/textures/earth/satellites/moon_topo_1k.jpg"
                         }
                     }
                 },
@@ -161,16 +191,16 @@
                     },
                     "_3d": {
                         "textures": {
-                            "base": "src/assets/textures/earth/satellites/moon_1k.jpg",
-                            "topo": "src/assets/textures/earth/satellites/moon_topo_1k.jpg"
+                            "base": "http://grlindburg.com/SmokoSystem/src/assets/textures/earth/satellites/moon_1k.jpg",
+                            "topo": "http://grlindburg.com/SmokoSystem/src/assets/textures/earth/satellites/moon_topo_1k.jpg"
                         }
                     }
                 }
             ],
             "_3d": {
                 "textures": {
-                    "base": "src/assets/textures/mars.jpg",
-                    "topo": "src/assets/textures/mars_topo.jpg"
+                    "base": "http://grlindburg.com/SmokoSystem/src/assets/textures/mars.jpg",
+                    "topo": "http://grlindburg.com/SmokoSystem/src/assets/textures/mars_topo.jpg"
                 }
             }
         }
@@ -199,7 +229,7 @@
             "satellites": [],
             "_3d": {
                 "textures": {
-                    "base": "src/assets/textures/ceres.png"
+                    "base": "http://grlindburg.com/SmokoSystem/src/assets/textures/ceres.png"
                 }
             }
         },
@@ -227,7 +257,7 @@
             "satellites": [],
             "_3d": {
                 "textures": {
-                    "base": "src/assets/textures/pluto.jpg"
+                    "base": "http://grlindburg.com/SmokoSystem/src/assets/textures/pluto.jpg"
                 }
             }
         },
@@ -269,8 +299,8 @@
                     },
                     "_3d": {
                         "textures": {
-                            "base": "src/assets/textures/earth/satellites/moon_1k.jpg",
-                            "topo": "src/assets/textures/earth/satellites/moon_topo_1k.jpg"
+                            "base": "http://grlindburg.com/SmokoSystem/src/assets/textures/earth/satellites/moon_1k.jpg",
+                            "topo": "http://grlindburg.com/SmokoSystem/src/assets/textures/earth/satellites/moon_topo_1k.jpg"
                         }
                     }
                 },
@@ -290,15 +320,15 @@
                     },
                     "_3d": {
                         "textures": {
-                            "base": "src/assets/textures/earth/satellites/moon_1k.jpg",
-                            "topo": "src/assets/textures/earth/satellites/moon_topo_1k.jpg"
+                            "base": "http://grlindburg.com/SmokoSystem/src/assets/textures/earth/satellites/moon_1k.jpg",
+                            "topo": "http://grlindburg.com/SmokoSystem/src/assets/textures/earth/satellites/moon_topo_1k.jpg"
                         }
                     }
                 }
             ],
             "_3d": {
                 "textures": {
-                    "base": "src/assets/textures/pluto.jpg"
+                    "base": "http://grlindburg.com/SmokoSystem/src/assets/textures/pluto.jpg"
                 }
             }
         },
@@ -326,7 +356,7 @@
             "satellites": [],
             "_3d": {
                 "textures": {
-                    "base": "src/assets/textures/pluto.jpg"
+                    "base": "http://grlindburg.com/SmokoSystem/src/assets/textures/pluto.jpg"
                 }
             }
         }
@@ -339,7 +369,7 @@
         },
         "_3d": {
             "textures": {
-                "base": "src/assets/textures/pluto.jpg"
+                "base": "http://grlindburg.com/SmokoSystem/src/assets/textures/pluto.jpg"
             }
         }
     },
@@ -351,7 +381,7 @@
         },
         "_3d": {
             "textures": {
-                "base": "src/assets/textures/pluto.jpg"
+                "base": "http://grlindburg.com/SmokoSystem/src/assets/textures/pluto.jpg"
             }
         }
     }

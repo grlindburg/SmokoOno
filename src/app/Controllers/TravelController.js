@@ -177,11 +177,9 @@ function(Moon, ColorManager) {
 
       this.camera.lookAt(new THREE.Vector3());
 
-      //console.log(analyser.data);
       //var uniforms = {
       //  tAudioData: { value: new THREE.DataTexture( analyser.data, 128 / 2, 1, THREE.LuminanceFormat ) }
       //};
-      //console.log(uniforms);
 
       //targetObject.threeObject.scale.set(Math.random() * 1000);
 
@@ -203,36 +201,42 @@ function(Moon, ColorManager) {
 
       switch(targetObject.name) {
         case "Earth":
-          track = 'src/assets/sound/nolook.mp3';
+          track = 'http://grlindburg.com/SmokoSystem/src/assets/sound/nolook.mp3';
 
           break;
 
         case "Mars":
-          track = 'src/assets/sound/superstarmoves.mp3';
+          track = 'http://grlindburg.com/SmokoSystem/src/assets/sound/superstarmoves.mp3';
 
           break;
       }
 
-      audioLoader.load( track, function( buffer ) {
-        sound.setBuffer( buffer );
-        sound.setRefDistance(3)
-        sound.setLoop( true );
-        sound.setVolume( 0.5 );
-        sound.play();
-      });
+      if(targetObject.threeObject.children[2]) {
+        
+      } else {
+        audioLoader.load( track, function( buffer ) {
+          sound.setBuffer( buffer );
+          sound.setRefDistance(3)
+          sound.setLoop( true );
+          sound.setVolume( 0.5 );
+          sound.play();
+        });
 
-      var source = listener.context.createBufferSource();
+        var source = listener.context.createBufferSource();
 
-      source.start();
+        source.start();
 
-      var analyser = new THREE.AudioAnalyser( sound, 32 );
-      var data = analyser.getAverageFrequency()
-      setInterval(function(){
-        data = analyser.getAverageFrequency()
-      }, 1000)
+        var analyser = new THREE.AudioAnalyser( sound, 32 );
+        var data = analyser.getAverageFrequency()
+        var baseline = targetObject._diameter;
+        setInterval(function(){
+          data = analyser.getAverageFrequency()
+          //targetObject.threeObject.scale.set((1 + data/200), (1 + data/200), (1 + data/200));
+        }, 10)
 
-      //alert(source);
-      targetObject.threeObject.add(sound);
+        //alert(source);
+        targetObject.threeObject.add(sound);
+      }
     }
 
     /**

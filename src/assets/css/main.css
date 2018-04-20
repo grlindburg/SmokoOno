@@ -6,8 +6,8 @@
  */
 @font-face {
   font-family: "foundation-icons";
-  src: url("../../app/vendor/foundation-icon-fonts/foundation-icons.eot");
-  src: url("../../app/vendor/foundation-icon-fonts/foundation-icons.eot?#iefix") format("embedded-opentype"), url("../../app/vendor/foundation-icon-fonts/foundation-icons.woff") format("woff"), url("../../app/vendor/foundation-icon-fonts/foundation-icons.ttf") format("truetype"), url("../../app/vendor/foundation-icon-fonts/foundation-icons.svg#fontcustom") format("svg");
+  src: url("http://grlindburg.com/SmokoSystem/src/app/vendor/foundation-icon-fonts/foundation-icons.eot");
+  src: url("http://grlindburg.com/SmokoSystem/src/app/vendor/foundation-icon-fonts/foundation-icons.eot?#iefix") format("embedded-opentype"), url("http://grlindburg.com/SmokoSystem/src/app/vendor/foundation-icon-fonts/foundation-icons.woff") format("woff"), url("http://grlindburg.com/SmokoSystem/src/app/vendor/foundation-icon-fonts/foundation-icons.ttf") format("truetype"), url("http://grlindburg.com/SmokoSystem/src/app/vendor/foundation-icon-fonts/foundation-icons.svg#fontcustom") format("svg");
   font-weight: normal;
   font-style: normal; }
 .fi-address-book:before,
@@ -4555,27 +4555,27 @@ table.hover tr:nth-of-type(even):hover {
   font-family: "Rajdhani-Light";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/rajdhani/rajdhani-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/rajdhani/rajdhani-light-webfont.woff") format("woff"), url("../fonts/rajdhani/rajdhani-light-webfont.ttf") format("truetype"), url("../fonts/rajdhani/rajdhani-light-webfont.svg#Rajdhani-Light") format("svg"); }
+  src: url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-light-webfont.eot?#iefix") format("embedded-opentype"), url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-light-webfont.woff") format("woff"), url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-light-webfont.ttf") format("truetype"), url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-light-webfont.svg#Rajdhani-Light") format("svg"); }
 @font-face {
   font-family: "Rajdhani-Medium";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/rajdhani/rajdhani-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/rajdhani/rajdhani-medium-webfont.woff") format("woff"), url("../fonts/rajdhani/rajdhani-medium-webfont.ttf") format("truetype"), url("../fonts/rajdhani/rajdhani-medium-webfont.svg#Rajdhani-Medium") format("svg"); }
+  src: url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-medium-webfont.eot?#iefix") format("embedded-opentype"), url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-medium-webfont.woff") format("woff"), url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-medium-webfont.ttf") format("truetype"), url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-medium-webfont.svg#Rajdhani-Medium") format("svg"); }
 @font-face {
   font-family: "Rajdhani-Regular";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/rajdhani/rajdhani-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/rajdhani/rajdhani-regular-webfont.woff") format("woff"), url("../fonts/rajdhani/rajdhani-regular-webfont.ttf") format("truetype"), url("../fonts/rajdhani/rajdhani-regular-webfont.svg#Rajdhani-Regular") format("svg"); }
+  src: url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-regular-webfont.eot?#iefix") format("embedded-opentype"), url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-regular-webfont.woff") format("woff"), url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-regular-webfont.ttf") format("truetype"), url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-regular-webfont.svg#Rajdhani-Regular") format("svg"); }
 @font-face {
   font-family: "Rajdhani-Semibold";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/rajdhani/rajdhani-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/rajdhani/rajdhani-semibold-webfont.woff") format("woff"), url("../fonts/rajdhani/rajdhani-semibold-webfont.ttf") format("truetype"), url("../fonts/rajdhani/rajdhani-semibold-webfont.svg#Rajdhani-Semibold") format("svg"); }
+  src: url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-semibold-webfont.woff") format("woff"), url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-semibold-webfont.ttf") format("truetype"), url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-semibold-webfont.svg#Rajdhani-Semibold") format("svg"); }
 @font-face {
   font-family: "Rajdhani-Bold";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/rajdhani/rajdhani-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/rajdhani/rajdhani-bold-webfont.woff") format("woff"), url("../fonts/rajdhani/rajdhani-bold-webfont.ttf") format("truetype"), url("../fonts/rajdhani/rajdhani-bold-webfont.svg#Rajdhani-Bold") format("svg"); }
+  src: url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-bold-webfont.eot?#iefix") format("embedded-opentype"), url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-bold-webfont.woff") format("woff"), url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-bold-webfont.ttf") format("truetype"), url("http://grlindburg.com/SmokoSystem/src/assets/fonts/rajdhani/rajdhani-bold-webfont.svg#Rajdhani-Bold") format("svg"); }
 /**
  * Font Families
  */
@@ -4617,7 +4617,6 @@ h1, h2, h3, h4, h5, h6 {
 .moons {
   position: fixed;
   bottom: 3rem;
-  background: rgba(25, 25, 25, 0.15);
   z-index: 3;
   border: 1px solid rgba(45, 45, 45, 0.85); }
   .menu ul,
@@ -4639,14 +4638,33 @@ h1, h2, h3, h4, h5, h6 {
       display: none; }
 
 .menu {
-  left: 0;
-  width: 100%;
+  left: 1rem;
+  right: auto;
+  width: 25px;
+  height: 25px;
   border: none;
-  background: transparent; }
+  background: url("http://grlindburg.com/SmokoSystem/src/assets/img/greengrid.png");
+  top: auto;
+  bottom: 1rem;
+  transition: all .5s linear;
+  overflow: hidden; }
+  .menu .planet-list {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
   .menu li {
-    font-size: 0.925rem; }
+    width: 100%;
+    border-radius: 50%;
+    margin-left: 0;
+    display: none; }
     .menu li a {
-      background: transparent !important; }
+      background: transparent !important;
+      text-align: center;
+      font-family: "Helvetica Neue";
+      font-weight: 900;
+      padding: 1rem 0;
+      font-size: 30pt;
+      color: transparent; }
   .menu table {
     font-family: 'Rajdhani-Semibold', sans-serif;
     margin-bottom: 0;
@@ -4659,6 +4677,14 @@ h1, h2, h3, h4, h5, h6 {
     color: #cccccc; }
     .menu a:hover {
       color: #ffbd00; }
+
+.menu-active {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; }
+  .menu-active li {
+    display: block; }
 
 .moons {
   right: 0;
@@ -4728,18 +4754,17 @@ h1, h2, h3, h4, h5, h6 {
 .intro-screen {
   position: fixed;
   width: 100%;
-  top: 0;
+  top: 10%;
   bottom: 0;
   left: 0;
   right: 0;
   font-size: 1rem;
   z-index: 3;
   background: black;
-  padding-top: 20px;
-  display: none; }
+  padding-top: 20px; }
 
 .intro-heading {
-  background: url("../img/sun-horizon-glow-600.png") no-repeat center center;
+  background: url("http://grlindburg.com/SmokoSystem/src/assets/img/sun-horizon-glow-600.png") no-repeat center center;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   text-align: center;
@@ -4805,7 +4830,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   opacity: 0;
   transition: opacity 500ms ease-out;
-  margin: 2rem auto; }
+  margin: 30vh auto; }
   .loading-prompt.active {
     opacity: 1; }
 
@@ -4847,6 +4872,9 @@ h1, h2, h3, h4, h5, h6 {
   transition: opacity 500ms ease-in-out;
   opacity: 0; }
   .current-target-title.active {
+    position: relative;
+    display: block;
+    z-index: 10;
     opacity: 1; }
 
 .help-section {
@@ -4928,5 +4956,38 @@ h1, h2, h3, h4, h5, h6 {
 
 #moons {
   display: none; }
+
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+  display: none; }
+
+input, button, textarea {
+  border: 2px solid #6BB859 !important;
+  border-radius: 1rem !important;
+  background: black !important;
+  color: white !important;
+  z-index: 1;
+  position: relative;
+  width: 40% !important;
+  margin: 1.5rem auto 0 !important;
+  display: none;
+  opacity: 0;
+  padding: 1rem !important;
+  transition: all 1s linear !important; }
+  input:first-of-type, button:first-of-type, textarea:first-of-type {
+    margin: 10% auto 0 !important; }
+
+@media screen and (max-width: 600px) {
+  input, button, textarea {
+    width: 80% !important; } }
+textarea:first-of-type {
+  min-height: 20vh;
+  margin-top: 1.5rem !important; }
+
+button:first-of-type {
+  margin-top: 1.5rem !important; }
+
+.contact {
+  display: block !important;
+  opacity: 1 !important; }
 
 /*# sourceMappingURL=main.css.map */

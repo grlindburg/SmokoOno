@@ -6,11 +6,11 @@ $base_link_color: #0080ff;
 /**
  * Font Faces
  */
-@include font-face('Rajdhani-Light', '../fonts/rajdhani/rajdhani-light-webfont', $file-formats: eot woff svg ttf);
-@include font-face('Rajdhani-Medium', '../fonts/rajdhani/rajdhani-medium-webfont', $file-formats: eot woff svg ttf);
-@include font-face('Rajdhani-Regular', '../fonts/rajdhani/rajdhani-regular-webfont', $file-formats: eot woff svg ttf);
-@include font-face('Rajdhani-Semibold', '../fonts/rajdhani/rajdhani-semibold-webfont', $file-formats: eot woff svg ttf);
-@include font-face('Rajdhani-Bold', '../fonts/rajdhani/rajdhani-bold-webfont', $file-formats: eot woff svg ttf);
+@include font-face('Rajdhani-Light', 'https://ear2ground.blob.core.windows.net/media/src/assets/fonts/rajdhani/rajdhani-light-webfont', $file-formats: eot woff svg ttf);
+@include font-face('Rajdhani-Medium', 'https://ear2ground.blob.core.windows.net/media/src/assets/fonts/rajdhani/rajdhani-medium-webfont', $file-formats: eot woff svg ttf);
+@include font-face('Rajdhani-Regular', 'https://ear2ground.blob.core.windows.net/media/src/assets/fonts/rajdhani/rajdhani-regular-webfont', $file-formats: eot woff svg ttf);
+@include font-face('Rajdhani-Semibold', 'https://ear2ground.blob.core.windows.net/media/src/assets/fonts/rajdhani/rajdhani-semibold-webfont', $file-formats: eot woff svg ttf);
+@include font-face('Rajdhani-Bold', 'https://ear2ground.blob.core.windows.net/media/src/assets/fonts/rajdhani/rajdhani-bold-webfont', $file-formats: eot woff svg ttf);
 
 /**
  * Font Families

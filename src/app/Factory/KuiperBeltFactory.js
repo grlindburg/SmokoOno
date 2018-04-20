@@ -14,7 +14,7 @@ function(Scene, Constants, RandomNumberGenerator) {
       this._distanceFromParentMin = data.kuiperBelt.distanceFromParent.min;
       this._distanceFromParentMax = data.kuiperBelt.distanceFromParent.max;
       this._distanceFromParentMedian = this.calculateDistanceFromParentMedian();
-      this._texture = new THREE.TextureLoader().load('src/assets/textures/asteroid_dark.jpg');
+      this._texture = new THREE.TextureLoader().load('http://grlindburg.com/SmokoSystem/src/assets/textures/asteroid_dark.jpg');
       this._randomNumberGenerator = new RandomNumberGenerator();
       this._orbitCentroid = new THREE.Object3D();
       this._orbitRadian = 360 / 112897;
@@ -57,7 +57,7 @@ function(Scene, Constants, RandomNumberGenerator) {
 
         this._orbitCentroid.add(particleSystem);
 
-        this._scene.add(this._orbitCentroid);
+        //this._scene.add(this._orbitCentroid);
 
         document.addEventListener('frame', (e)=> {
           var degreesToRotate = 0.002;

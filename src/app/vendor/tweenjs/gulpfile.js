@@ -11,14 +11,14 @@ var metadata = require('./package');
 var header = '// ' + metadata.name + ' v' + metadata.version + ' ' + metadata.homepage + '\n';
 
 gulp.task('lint', function() {
-	return gulp.src('src/Tween.js')
+	return gulp.src('https://ear2ground.blob.core.windows.net/media/46/src/Tween.js')
 	.pipe(jshint())
 	.pipe(jshint.reporter('default'));
 });
 
 gulp.task('min', function() {
 	return gulp.src([
-		'src/Tween.js'
+		'https://ear2ground.blob.core.windows.net/media/46/src/Tween.js'
 	])
 	.pipe(uglify())
 	.pipe(insert.prepend(header))
@@ -27,7 +27,7 @@ gulp.task('min', function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch('src/*.js', ['lint', 'min']);
+	gulp.watch('https://ear2ground.blob.core.windows.net/media/46/src/*.js', ['lint', 'min']);
 });
 
 gulp.task('default', ['lint', 'min', 'watch']);

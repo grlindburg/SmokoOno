@@ -35,7 +35,7 @@ function(
   var templateLoader = new TemplateLoader();
   var dataRequest = new HttpRequest(
     'GET',
-    'src/data/solarsystem.json',
+    'http://grlindburg.com/SmokoSystem/src/data/solarsystem.json',
     true
   );
 

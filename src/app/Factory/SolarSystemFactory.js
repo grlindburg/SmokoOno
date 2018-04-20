@@ -77,6 +77,8 @@ function(
       this.solarSystemObjects.sun = sun;
       this.scene.add(sun.threeObject);
 
+      console.log(sun.threeObject);
+
       var map = {
         '1': {
           buildGroup: this.buildPlanets.bind(this, data.planets, sun),

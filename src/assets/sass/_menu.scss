@@ -2,7 +2,6 @@
 .moons {
     position: fixed;
     bottom: 3rem;
-    background: rgba(25, 25, 25, 0.15);
     z-index: 3;
     border: 1px solid rgba(45, 45, 45, 0.85);
 
@@ -31,16 +30,36 @@
 }
 
 .menu {
-    left: 0;
-    width: 100%;
+    left: 1rem;
+    right: auto;
+    width: 25px;
+    height: 25px;
     border: none;
-    background: transparent;
+    background: url('../img/greengrid.png');
+    top: auto;
+    bottom: 1rem;
+    transition: all .5s linear;
+    overflow: hidden;
+
+    .planet-list {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
     li {
-        font-size: 0.925rem;
+        width: 100%;
+        border-radius: 50%;
+        margin-left: 0;
+        display: none;
         a {
             background: transparent !important;
-
+            text-align: center;
+            font-family: "Helvetica Neue";
+            font-weight: 900;
+            padding: 1rem 0;
+            font-size: 30pt;
+            color: transparent;
         }
     }
 
@@ -62,6 +81,17 @@
         &:hover {
             color: #ffbd00;
         }
+    }
+}
+
+.menu-active {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+    li {
+        display: block;
     }
 }
 

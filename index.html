@@ -20,9 +20,17 @@
                 <a href="https://twitter.com/SanderBlue" class="twitter-follow-button" data-show-count="false">Follow @SanderBlue</a>
                 <iframe src="https://ghbtns.com/github-btn.html?user=sanderblue&repo=solar-system-threejs&type=star&count=false" class="github-button" frameborder="0" scrolling="0"></iframe>
             </div> -->
+
             <div id="menu" class="menu"></div>
             <div id="moons" class="moons"></div>
             <div id="smokologo" class="current-target-title active"><img src="src/assets/img/smokeywhite.png"></div>
+            
+            <form id="ajax-contact" action="mail.php" method="post">
+                <input id="name" name="name" type="text" placeholder="Name" />
+                <input id="email" name="email" type="text" placeholder="Email" />
+                <textarea id="message" name="message"></textarea>
+                <button id="follow" type="submit">Submit</button>
+            </form>
             <div id="current-target-title" class="current-target-title active"><img src="src/assets/img/smokeywhite.png"></div>
             <div id="toggle-effects" class="toggle-effects">
                 <div class="control-holder">
@@ -37,25 +45,9 @@
             </div>
             <div class="intro-screen">
                 <div class="intro-text">
-                    <div class="intro-heading">
-                        <h1>Our Solar System</h1>
-                    </div>
-                    <div class="inner">
-                        <p>A solar system refers to a star and all the objects that travel in orbit around it. Our solar system consists of the sun, eight planets (and their natural satellites), dwarf planets, asteroids, and comets. Our solar system is located within the Orion Arm of the Milky Way Galaxy, which is located about 27,000 light-years away from the Milky Way Galactic Center.</p>
-                        <p>This is a project powered by <a href="http://threejs.org/" target="_blank">Three.js</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a>. All objects within this project have been modeled to <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Scale = 1 * 10^-4.2">scale</span> based on real astronomical data. The scene currently renders the sun, all eight planets (nine if you side with Pluto being a planet), each planet's moons, the asteriod belt and thousands of stars.</p>
-                        <p>
-                            <strong>For a better viewing experience, use a laptop or desktop with the latest version of Google Chrome or Safari Technology Preview.</strong>
-                        </p>
-                        <div class="social-buttons social-buttons-intro-screen">
-                            <a href="https://twitter.com/SanderBlue" class="twitter-follow-button" data-show-count="false">Follow @SanderBlue</a>
-                            <iframe src="https://ghbtns.com/github-btn.html?user=sanderblue&repo=solar-system-threejs&type=star&count=false" class="github-button" frameborder="0" scrolling="0"></iframe>
-                        </div>
-                        <div id="render-scene" class="button large render-scene">
-                            <span>View Solar System</span>
-                        </div>
-                    </div>
+                    
                     <div id="loading-prompt" class="loading-prompt">
-                        <span>Building the Solar System...</span>
+                        <span>Finessing the Universal Notes...</span>
                         <div id="realtime-updates"></div>
                         <div id="progress-bar" class="progress" role="progressbar" tabindex="0">
                             <div class="progress-meter"></div>
@@ -67,7 +59,7 @@
         </div>
 
         <div class="full reveal" id="exampleModal8" data-reveal>
-          <p>Sorry, but this project is currently not viewable from a mobile device.</p>
+          <p>This project is currently viewable from a mobile device. Sorry for the convenience.</p>
           <img src="http://placekitten.com/1920/1280" alt="Intropsective Cage">
           <button class="close-button" data-close aria-label="Close reveal" type="button">
             <span aria-hidden="true">&times;</span>
@@ -108,6 +100,8 @@
         <script type="text/javascript" src="src/app/vendor/tweenjs/build/tween.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.js"></script>
         <script type="text/javascript" src="src/app/vendor/OBJLoader.js"></script>
+        <script type="text/javascript" src="src/app/vendor/VolumetricFire.js"></script>
+        <script type="text/javascript" src="src/app/vendor/CanvasRenderer.js"></script>
         <script data-main="src/app/app" src="src/app/vendor/requirejs/require.js"></script>
         <script type="text/javascript">
             //window.addEventListener('touchstart', playSound);
@@ -127,6 +121,46 @@
             //  source.connect(listener.context.destination);
             //  source.start();
             //}
+
+
+            $('.menu').click(function() {
+                $(this).toggleClass('menu-active');
+            });
+
+            $('#follow').click(function(e) {
+                e.preventDefault();
+
+                var form = $('#ajax-contact');
+                var formData = $(form).serialize();
+                //console.log(formData);
+                // Submit the form using AJAX.
+                $.ajax({
+                    type: 'POST',
+                    url: $(form).attr('action'),
+                    data: formData
+                }).done(function(response) {
+                    // Make sure that the formMessages div has the 'success' class.
+
+                    // Set the message text.
+                    //console.log(response)
+
+                    // Clear the form.
+                    $('#name').val('');
+                    $('#email').val('');
+                    $('#message').val('');
+                }).fail(function(data) {
+                    // Make sure that the formMessages div has the 'error' class.
+
+                    // Set the message text.
+                    if (data.responseText !== '') {
+                        $(formMessages).text(data.responseText);
+                    } else {
+                        $(formMessages).text('Oops! An error occured and your message could not be sent.');
+                    }
+                });
+            })
+
+
 
             function isMobile() {
                 return navigator.userAgent.match(/Android/i)
